@@ -1,5 +1,5 @@
 {% set name = "mdurl" %}
-{% set version = "0.1.0" %}
+{% set version = "0.1.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/mdurl-{{ version }}.tar.gz
-  sha256: 94873a969008ee48880fb21bad7de0349fef529f3be178969af5817239e9b990
+  sha256: bb413d29f5eea38f31dd4754dd7377d4465116fb207585f97bf925588687c1ba
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
